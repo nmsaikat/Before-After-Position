@@ -1,0 +1,68 @@
+.work {
+  width: 500px;
+}
+
+.work_img a img {
+  width: 100%;
+}
+
+.work_img a {
+  position: relative;
+  display: block;
+}
+
+.work_img a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: red;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.work_img a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.work_img a:hover::before {
+  opacity: 0.5;
+  width: 50%;
+}
+
+.work_img a:hover::after {
+  opacity: 0.5;
+  width: 50%;
+}
+
+/* Text Underline Animation */
+.uderline h1 {
+  position: relative;
+  display: inline-block;
+}
+
+.uderline h1::before {
+  content: "";
+  position: absolute;
+  background: #000;
+  height: 2px;
+  width: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: 0.3s;
+}
+.uderline h1:hover::before {
+  width: 100%;
+}
